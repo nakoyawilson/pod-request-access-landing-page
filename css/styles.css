@@ -10,6 +10,7 @@
   --red: rgb(251, 62, 62);
   --white: rgb(255, 255, 255);
   --shadow: rgba(84, 230, 175, 0.497913);
+  --shadow-desktop: rgba(84, 230, 175, 0.14);
   --light-green: rgb(179, 255, 226);
 }
 
@@ -39,10 +40,10 @@ body {
   position: relative;
 }
 
-body::after {
+body::before {
   content: "";
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: var(--dark-blue);
   opacity: 0.8;
   position: absolute;
@@ -274,7 +275,7 @@ button {
     display: block;
     grid-row: 3 / 4;
     position: relative;
-    width: min(100%, 47.2rem);
+    width: min(100%, 42.7rem);
   }
 
   .form-input {
@@ -328,9 +329,9 @@ button {
   }
 
   .container::after {
-    bottom: -5.2rem;
+    bottom: -5rem;
     left: auto;
-    right: -55.2rem;
+    right: -55rem;
   }
 
   .main-heading {
@@ -342,8 +343,13 @@ button {
     margin-top: 2.4rem;
   }
 
+  .form-submit {
+    box-shadow: 0 2px 4px var(--shadow-desktop);
+  }
+
   .form-submit:hover {
     background-color: var(--light-green);
+    box-shadow: 0 2px 4px var(--shadow);
     cursor: pointer;
   }
 }
