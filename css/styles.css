@@ -10,6 +10,7 @@
   --red: rgb(251, 62, 62);
   --white: rgb(255, 255, 255);
   --shadow: rgba(84, 230, 175, 0.497913);
+  --light-green: rgb(179, 255, 226);
 }
 
 /* CSS Reset */
@@ -339,5 +340,10 @@ button {
 
   .paragraph {
     margin-top: 2.4rem;
+  }
+
+  .form-submit:hover {
+    background-color: var(--light-green);
+    cursor: pointer;
   }
 }
