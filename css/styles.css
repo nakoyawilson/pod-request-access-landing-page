@@ -40,7 +40,7 @@ body {
   position: relative;
 }
 
-body::before {
+body::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -331,7 +331,7 @@ button {
   .container::after {
     bottom: -5rem;
     left: auto;
-    right: -55rem;
+    right: -55.2rem;
   }
 
   .main-heading {
