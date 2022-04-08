@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap");
+
+:root {
+  --font: "Chivo", sans-serif;
+  --green: rgb(84, 230, 175);
+  --medium-blue: rgb(44, 52, 75);
+  --dark-blue: rgb(18, 23, 37);
+  --grayish-blue: rgb(90, 102, 138);
+  --light-blue: rgb(194, 203, 229);
+  --red: rgb(251, 62, 62);
+  --white: rgb(255, 255, 255);
+  --shadow: rgba(84, 230, 175, 0.497913);
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("../assets/mobile/image-host.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font);
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark-blue);
+  opacity: 0.8;
+  position: absolute;
+  top: -6.2rem;
+  left: 0;
+  z-index: -1;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  font: inherit;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Header */
+
+.header {
+  margin-top: 6.2rem;
+}
+
+.main-logo {
+  height: 5.6rem;
+  margin: 0 auto;
+}
+
+/* Main */
+
+.container {
+  width: min(87.2%, 32.7rem);
+  margin: 5.7rem auto 0;
+}
+
+.main-heading {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: inherit;
+}
+
+.main-heading .highlight {
+  color: var(--white);
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--light-blue);
+  margin-top: 1.6rem;
+}
+
+.streaming-service-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3.3rem;
+  gap: 1.6rem;
+}
+
+.streaming-service-logo:nth-of-type(1) {
+  width: 5.6rem;
+}
+
+.streaming-service-logo:nth-of-type(2) {
+  width: 4.5rem;
+}
+
+.streaming-service-logo:nth-of-type(3) {
+  width: 7.3rem;
+}
+
+.streaming-service-logo:nth-of-type(4) {
+  width: 7.7rem;
+}
+
+.sign-up {
+  margin: 4.8rem auto 9.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form-input {
+  background: var(--medium-blue);
+  border-radius: 28px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: var(--white);
+  padding: 0.9rem 0.9rem 0.9rem 3.2rem;
+}
+
+.form-input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.error-message {
+  display: none;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--red);
+  margin-top: 0.8rem;
+}
+
+.error-message.display-error {
+  display: block;
+}
+
+.form-submit {
+  background: var(--green);
+  box-shadow: 0 25px 20px -20px var(--shadow);
+  border-radius: 28px;
+  padding: 0.9rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: var(--dark-blue);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 600px) {
+  /* General Styles */
+
+  body {
+    background-color: var(--dark-blue);
+    background-image: url("../assets/tablet/image-host.jpg");
+    background-size: 49.1rem 76.7rem;
+    background-position: top right;
+    text-align: left;
+  }
+
+  body::after {
+    content: none;
+  }
+
+  /* Header */
+
+  .header {
+    margin-top: 5rem;
+  }
+
+  .main-logo {
+    margin: 0 auto 0 3.9rem;
+  }
+
+  /* Main */
+
+  .container {
+    width: min(82.7%, 63.5rem);
+    margin: 15.2rem auto 25.7rem 3.9rem;
+    background-color: var(--dark-blue);
+    padding-top: 9.3rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    position: relative;
+  }
+
+  .container::after {
+    content: "";
+    width: 23.2rem;
+    height: 10.4rem;
+    background-image: url("../assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    bottom: -25.7rem;
+    left: 0;
+  }
+
+  .main-heading {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-top: 3.1rem;
+    width: min(100%, 44.5rem);
+  }
+
+  .streaming-service-wrapper {
+    margin-top: 6.4rem;
+    width: min(100%, 53.6rem);
+  }
+
+  .streaming-service-logo:nth-of-type(1) {
+    width: 9.6rem;
+  }
+
+  .streaming-service-logo:nth-of-type(2) {
+    width: 7.8rem;
+  }
+
+  .streaming-service-logo:nth-of-type(3) {
+    width: 12.5rem;
+  }
+
+  .streaming-service-logo:nth-of-type(4) {
+    width: 12.9rem;
+  }
+
+  .sign-up {
+    margin-top: 4rem;
+    display: block;
+    grid-row: 3 / 4;
+    position: relative;
+    width: min(100%, 47.2rem);
+  }
+
+  .form-input {
+    padding: 1.4rem 1.4rem 1.4rem 3.2rem;
+  }
+
+  .error-message {
+    position: absolute;
+    left: 3.2rem;
+    bottom: -2.4rem;
+  }
+
+  .form-submit {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 16.2rem;
+  }
+}

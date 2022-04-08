@@ -10,30 +10,61 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>Frontend Mentor | Pod request access landing page</title>
   </head>
   <body>
-    <main>
-      <img src="assets/desktop/logo.svg" alt=" Pod logo" />
-      <h1>Publish your podcasts <span>everywhere.</span></h1>
-      <p>
+    <header class="header">
+      <img src="assets/desktop/logo.svg" alt=" Pod logo" class="main-logo" />
+    </header>
+    <main class="container">
+      <h1 class="main-heading">
+        Publish your podcasts <span class="highlight">everywhere.</span>
+      </h1>
+      <p class="paragraph">
         Upload your audio to Pod with a single click. We’ll then distribute your
         podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
         more!
       </p>
-      <img src="assets/desktop/spotify.svg" alt="Spotify logo" />
-      <img src="assets/desktop/apple-podcast.svg" alt="Apple podcast logo" />
-      <img
-        src="assets/desktop/google-podcasts.svg"
-        alt="Google podcasts logo"
-      />
-      <img src="assets/desktop/pocket-casts.svg" alt="Pocket casts logo" />
-      <form>
-        <label for="email-address" class="visually-hidden">Email address</label>
-        <input type="email" placeholder="Email address" id="email-address" />
-        <button>Request access</button>
+      <div class="streaming-service-wrapper">
+        <img
+          src="assets/desktop/spotify.svg"
+          alt="Spotify logo"
+          class="streaming-service-logo"
+        />
+        <img
+          src="assets/desktop/apple-podcast.svg"
+          alt="Apple podcast logo"
+          class="streaming-service-logo"
+        />
+        <img
+          src="assets/desktop/google-podcasts.svg"
+          alt="Google podcasts logo"
+          class="streaming-service-logo"
+        />
+        <img
+          src="assets/desktop/pocket-casts.svg"
+          alt="Pocket casts logo"
+          class="streaming-service-logo"
+        />
+      </div>
+      <form class="sign-up" id="sign-up-form" novalidate>
+        <div>
+          <label for="email-input" class="visually-hidden">Email address</label>
+          <input
+            type="email"
+            placeholder="Email address"
+            id="email-input"
+            class="form-input"
+          />
+          <p class="error-message" id="email-error">
+            Oops! Please add your email
+          </p>
+        </div>
+        <button class="form-submit">Request access</button>
       </form>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
