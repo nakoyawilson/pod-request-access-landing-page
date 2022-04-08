@@ -32,24 +32,15 @@ html {
 
 body {
   background-image: url("../assets/mobile/image-host.jpg");
+  background-color: var(--dark-blue);
+  opacity: 0.8;
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font);
   font-weight: 300;
   text-align: center;
   position: relative;
-}
-
-body::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: var(--dark-blue);
-  opacity: 0.8;
-  position: absolute;
-  top: -6.2rem;
-  left: 0;
-  z-index: -1;
 }
 
 img {
@@ -193,10 +184,8 @@ button {
     background-size: 49.1rem 76.7rem;
     background-position: top right;
     text-align: left;
-  }
-
-  body::after {
-    content: none;
+    opacity: 1;
+    background-blend-mode: normal;
   }
 
   /* Header */
